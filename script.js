@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 const getLazer = function(){
   $.get("https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=laser-lights&rating=g", function(response){
-    $('#gif').attr({src:response.data.image_url, width:response.data.image_width});
+    $('#gif').attr({src:response.data.url, width:response.data.image_width});
   })
   .done(function(){
     if ($('#getGif').hasClass('first')){
